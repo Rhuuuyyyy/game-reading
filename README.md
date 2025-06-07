@@ -7,14 +7,15 @@ This project consists in a gamerfication of reading, that will help students in 
 ```
 📚
 ```
+# FINISHED!
 
-## Steps
+## Steps 
 
 ### Project Base 
 
 - [x] Set when the project will be use.
-- [ ] Set wich books will be used.
-- [ ] Set wich puzzles will be used.
+- [x] Set wich books will be used.
+- [x] Set wich puzzles will be used.
 - [x] Set how many pages will be used.
 
 ### Front-end 
@@ -24,8 +25,8 @@ This project consists in a gamerfication of reading, that will help students in 
 
 ### Back-end 
 
-- [ ] Configure the puzzles.
+- [x] Configure the puzzles.
 
 ### Document 
 
-- [ ] Finish Document.
+- [x] Finish Document.
