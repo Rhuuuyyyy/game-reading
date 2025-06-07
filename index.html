@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamerfication of Reading</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
+
+
+
+
 
 
 
@@ -19,25 +25,38 @@
         <div class="conteudo_primeiros_passos">
         <h1>Primeiros passos</h1>
         <p>O melhor caminho para um bom gosto</p>
+        
     </div>
 
-<div class="botao-livro_primeiros_passos">
+<div class="botao-livro_primeiros_passos" id="open-book-1">
     <img src="images/livro_imagem.png" alt="Ícone de Livro">
     <span>LIVRO</span>
 </div>
 </div>
 
-<div class="botao-livro-1">
+<div class="sobre" id="sobre">
+    <p><strong>SOBRE O PROJETO</strong></p>
+</div>
+</div>
+
+<div class="botao-livro-1" id="open-quiz-1">
     <img src="images/botao_livro_imagem.png" alt="Botao de Livro">
 </div>
 
-<div class="botao-livro-2">
+<div class="botao-livro-2" id="open-quiz-2">
     <img src="images/botao_livro_imagem.png" alt="Botao de Livro">
 </div>
 
-<div class="botao-livro-3">
+<div class="botao-livro-3" id="open-quiz-3">
     <img src="images/botao_livro_imagem.png" alt="Botao de Livro">
 </div>
+
+
+
+
+
+
+
 
 
 
@@ -52,23 +71,31 @@
         <p>O melhor caminho para um bom gosto</p>
     </div>
 
-<div class="botao-livro_segundo_passo">
+<div class="botao-livro_segundo_passo" id="open-book-2">
     <img src="images/livro_imagem_2.png" alt="Ícone de Livro">
     <span>LIVRO</span>
 </div>
 </div>
-
-<div class="botao-livro-2_1">
+<div class="botao-livro-2_1" id="open-quiz-21">
     <img src="images/botao_livro_imagem_2.png" alt="Botao de Livro">
 </div>
 
-<div class="botao-livro-2_2">
+<div class="botao-livro-2_2" id="open-quiz-22">
     <img src="images/botao_livro_imagem_2.png" alt="Botao de Livro">
 </div>
 
-<div class="botao-livro-2_3">
+<div class="botao-livro-2_3" id="open-quiz-23">
     <img src="images/botao_livro_imagem_2.png" alt="Botao de Livro">
 </div>
+
+
+
+
+
+
+
+
+
 
 
 <body>
@@ -80,25 +107,205 @@
         <h1>Terceiro passo</h1>
         <p>O melhor caminho para um bom gosto</p>
     </div>
-
-<div class="botao-livro_terceiro_passo">
+<div class="botao-livro_terceiro_passo" id="open-book-3">
     <img src="images/livro_imagem_3.png" alt="Ícone de Livro">
     <span>LIVRO</span>
 </div>
 </div>
 
-<div class="botao-livro-3_1">
+<div class="botao-livro-3_1" id="open-quiz-31">
     <img src="images/botao_livro_imagem_3.png" alt="Botao de Livro">
 </div>
 
-<div class="botao-livro-3_2">
+<div class="botao-livro-3_2" id="open-quiz-32">
     <img src="images/botao_livro_imagem_3.png" alt="Botao de Livro">
 </div>
 
-<div class="botao-livro-3_3">
+<div class="botao-livro-3_3" id="open-quiz-33">
     <img src="images/botao_livro_imagem_3.png" alt="Botao de Livro">
 </div>
 
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-1');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta11.html' em uma nova aba do navegador
+                window.location.href = 'pergunta11.html';
+            });
+        });
+    </script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-2');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta11.html' em uma nova aba do navegador
+                window.location.href = 'pergunta12.html';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-3');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta11.html' em uma nova aba do navegador
+                window.location.href = 'pergunta13.html';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-21');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta21.html' em uma nova aba do navegador
+                window.location.href = 'pergunta21.html';
+            });
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-22');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta22.html' em uma nova aba do navegador
+                window.location.href = 'pergunta22.html';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-23');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta23.html' em uma nova aba do navegador
+                window.location.href = 'pergunta23.html';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-31');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta31.html' em uma nova aba do navegador
+                window.location.href = 'pergunta31.html';
+            });
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-32');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta32.html' em uma nova aba do navegador
+                window.location.href = 'pergunta32.html';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-quiz-33');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta33.html' em uma nova aba do navegador
+                window.location.href = 'pergunta33.html';
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-book-1');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta11.html' em uma nova aba do navegador
+                window.location.href = 'livro1.html';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-book-2');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta21.html' em uma nova aba do navegador
+                window.location.href = 'livro2.html';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('open-book-3');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta31.html' em uma nova aba do navegador
+                window.location.href = 'livro3.html';
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o botão que vai abrir a nova página
+            const openPageButton = document.getElementById('sobre');
+
+            // Adiciona um event listener para o clique no botão
+            openPageButton.addEventListener('click', () => {
+                // Abre o arquivo 'pergunta31.html' em uma nova aba do navegador
+                window.location.href = 'sobre.html';
+            });
+        });
+    </script>
 
 </body>
 </html>

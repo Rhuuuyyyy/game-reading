@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livro: Dom Casmurro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo base para o corpo da página */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        /* Transições suaves para uma melhor experiência */
+        #link-card {
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-2xl mx-auto">
+        
+        <div class="mb-8 p-6 bg-[#FDE9C6] text-[#8C7D63] rounded-2xl shadow-lg text-center">
+            <h1 class="text-xl md:text-2xl font-semibold">
+                "Iracema": O Poema em Prosa que Canta a Origem do Ceará
+            </h1>
+            <p class="mt-2 text-base font-light">"Iracema": O Poema em Prosa que Canta a Origem do Ceará
+                "Iracema, a Lenda do Ceará", publicado em 1865, é uma das obras mais emblemáticas do Romantismo 
+                brasileiro e a joia da trilogia indianista de seu autor, José de Alencar. Mais do que um romance, 
+                o livro é um poema em prosa que narra a fundação mítica do estado do Ceará a partir do amor trágico 
+                entre a indígena Iracema e o primeiro colonizador português, Martim Soares Moreno.</p>
+        </div>
+
+        <div id="link-container">
+            <div id="link-card" class="bg-white p-6 rounded-2xl border-2 border-gray-200 cursor-pointer shadow-md hover:shadow-lg hover:border-[#A88C7B]">
+                <p class="text-gray-700 text-center text-lg font-medium">
+                    Ler o Livro em PDF
+                </p>
+            </div>
+        </div>
+
+
+        <div class="mt-8 text-center">
+            <button id="back-btn" class="bg-gray-500 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-gray-600 transition-all">
+                Voltar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const linkCard = document.getElementById('link-card');
+            const backButton = document.getElementById('back-btn');
+
+            // URL do PDF do livro
+            const pdfUrl = 'http://www.dominiopublico.gov.br/download/texto/bv000136.pdf';
+
+            // Função para redirecionar para o link do livro
+            const openBookLink = () => {
+                // Abre o link em uma nova aba para uma melhor experiência do usuário
+                window.open(pdfUrl, '_blank');
+            };
+            
+            // Função para voltar à página index
+            const goBack = () => {
+                window.location.href = 'index.html';
+            };
+
+            // Adiciona os ouvintes de evento
+            if (linkCard) {
+                linkCard.addEventListener('click', openBookLink);
+            }
+            if (backButton) {
+                backButton.addEventListener('click', goBack);
+            }
+        });
+    </script>
+
+</body>
+</html>

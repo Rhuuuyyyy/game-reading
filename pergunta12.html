@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Dom Casmurro</title>
+    <!-- Incluindo Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo base para o corpo da página */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        /* Transições suaves para uma melhor experiência */
+        .option-card {
+            transition: all 0.2s ease-in-out;
+        }
+        /* Classe para a resposta correta */
+        .correct {
+            background-color: #dcfce7 !important; /* Verde claro */
+            border-color: #22c55e !important; /* Verde */
+        }
+        .correct p {
+            color: #166534; /* Texto verde escuro */
+        }
+
+        /* Classe para a resposta incorreta */
+        .incorrect {
+            background-color: #fee2e2 !important; /* Vermelho claro */
+            border-color: #ef4444 !important; /* Vermelho */
+        }
+        .incorrect p {
+            color: #991b1b; /* Texto vermelho escuro */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-2xl mx-auto">
+        
+        <!-- Contêiner da Pergunta -->
+        <div class="mb-8 p-6 bg-[#A88C7B] text-white rounded-2xl shadow-lg text-center">
+            <h1 class="text-xl md:text-2xl font-semibold">
+                Em "Dom Casmurro", qual é a descrição exata que o narrador Bentinho usa para os olhos de Capitu, que se tornou uma das marcas da personagem?
+            </h1>
+        </div>
+
+        <!-- Contêiner das Opções -->
+        <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Opção Incorreta -->
+            <div class="option-card bg-white p-6 rounded-2xl border-2 border-gray-200 cursor-pointer shadow-md hover:shadow-lg hover:border-gray-300" data-correct="true">
+                <p class="text-gray-700 text-center text-lg">
+                    Olhos de ressaca, que arrastavam tudo para dentro.
+                </p>
+            </div>
+
+            <!-- Opção Incorreta -->
+            <div class="option-card bg-white p-6 rounded-2xl border-2 border-gray-200 cursor-pointer shadow-md hover:shadow-lg hover:border-gray-300">
+                <p class="text-gray-700 text-center text-lg">
+                    Olhos de noite, profundos e insondáveis.
+                </p>
+            </div>
+
+            <!-- Opção Correta -->
+            <div class="option-card bg-white p-6 rounded-2xl border-2 border-gray-200 cursor-pointer shadow-md hover:shadow-lg hover:border-gray-300">
+                <p class="text-gray-700 text-center text-lg">
+                    Olhos de cigana, oblíquos e dissimulados.
+                </p>
+            </div>
+
+            <!-- Opção Incorreta -->
+            <div class="option-card bg-white p-6 rounded-2xl border-2 border-gray-200 cursor-pointer shadow-md hover:shadow-lg hover:border-gray-300">
+                <p class="text-gray-700 text-center text-lg">
+                    Olhos de tempestade, que anunciavam o perigo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Botões de Ação -->
+        <div class="mt-8 text-center flex justify-center gap-4">
+            <!-- Botão Voltar -->
+            <button id="back-btn" class="bg-gray-500 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-gray-600 transition-all">
+                Voltar
+            </button>
+            <!-- Botão Tentar Novamente -->
+            <button id="reset-btn" class="hidden bg-blue-500 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-blue-600 transition-all">
+                Tentar Novamente
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = document.querySelectorAll('.option-card');
+            const resetButton = document.getElementById('reset-btn');
+            const backButton = document.getElementById('back-btn');
+            let answered = false;
+
+            // Função para lidar com a seleção de uma opção
+            const handleOptionClick = (event) => {
+                if (answered) {
+                    return; // Impede novos cliques se já foi respondido
+                }
+                answered = true;
+
+                // Desabilita o cursor de ponteiro para todas as opções
+                options.forEach(opt => {
+                    opt.style.cursor = 'default';
+                    opt.classList.remove('hover:shadow-lg', 'hover:border-gray-300');
+                });
+                
+                const clickedOption = event.currentTarget;
+                const isCorrect = clickedOption.dataset.correct === 'true';
+
+                if (isCorrect) {
+                    clickedOption.classList.add('correct');
+                } else {
+                    clickedOption.classList.add('incorrect');
+                    // Encontra e destaca a resposta correta
+                    const correctAnswer = document.querySelector('[data-correct="true"]');
+                    if (correctAnswer) {
+                        correctAnswer.classList.add('correct');
+                    }
+                }
+
+                // Mostra o botão de reset
+                resetButton.classList.remove('hidden');
+            };
+            
+            // Função para resetar o quiz
+            const resetQuiz = () => {
+                answered = false;
+                options.forEach(option => {
+                    option.classList.remove('correct', 'incorrect');
+                    option.style.cursor = 'pointer';
+                    option.classList.add('hover:shadow-lg', 'hover:border-gray-300');
+                });
+                resetButton.classList.add('hidden');
+            };
+
+            // Adiciona os ouvintes de evento
+            options.forEach(option => {
+                option.addEventListener('click', handleOptionClick);
+            });
+
+            resetButton.addEventListener('click', resetQuiz);
+
+            // Adiciona ouvinte de evento para o botão Voltar
+            backButton.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+
+</body>
+</html>

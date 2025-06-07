@@ -18,31 +18,39 @@
         #link-card {
             transition: all 0.2s ease-in-out;
         }
+
+        .fotos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .fotos img {
+            width: 35%;
+            height: 35%;
+            border-radius: 40%;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
 
     <div class="w-full max-w-2xl mx-auto">
-        
+        <div class="fotos">
+            <img src="images/rhyan.png" alt="rhyan">
+            <img src="images/joao.png" alt="joao">
+        </div>
         <div class="mb-8 p-6 bg-[#A88C7B] text-white rounded-2xl shadow-lg text-center">
             <h1 class="text-xl md:text-2xl font-semibold">
-                "Dom Casmurro": Um Mergulho nas Profundezas do Ciúme e da Dúvida
+                História e Ciência da Computação  Competências Digiais - PUCPR
             </h1>
-            <p class="mt-2 text-base font-light">Publicado em 1899, "Dom Casmurro", do mestre 
-                da literatura brasileira Machado de Assis, transcende a simples narrativa de 
-                um triângulo amoroso para se consolidar como uma das análises psicológicas mais
-                penetrantes e ambíguas da ficção. A obra, um dos pilares do Realismo no Brasil,
-                convida o leitor a uma jornada incerta pela mente de seu narrador, Bento Santiago,
-                o "Dom Casmurro" do título, enquanto ele reconstrói as memórias de seu grande amor por Capitolina, a enigmática Capitu.</p>
+            <p class="mt-2 text-base font-light">A tecnologia e as competências digitais tem sido cada vez mais importante no âmbito da
+                história. E baseado nisso, os alunos Rhyan Rocha e João Silva, do curso de História e Ciência da Computação da PUCPR, 
+                desenvolveram a gamerficação da leitura.</p>
+            </p>
         </div>
 
-        <div id="link-container">
-            <div id="link-card" class="bg-white p-6 rounded-2xl border-2 border-gray-200 cursor-pointer shadow-md hover:shadow-lg hover:border-[#A88C7B]">
-                <p class="text-gray-700 text-center text-lg font-medium">
-                    Ler o Livro em PDF
-                </p>
-            </div>
-        </div>
 
 
         <div class="mt-8 text-center">
